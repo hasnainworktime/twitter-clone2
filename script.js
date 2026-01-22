@@ -1,10 +1,13 @@
 let tweets = JSON.parse(localStorage.getItem("tweets")) || [];
 
 function addTweet() {
-  const input = document.getElementById("tweetInput");
-  const text = input.value.trim();
-
-  if (text === "") return;
+ const tweet = {
+  id: Date.now(),          // unique ID
+  text: tweetText,
+  author: "Muhammad Hasnain",
+  time: new Date().toLocaleString(),
+  likes: 0                // start likes from 0
+};
 
   const tweet = {
     user: "Muhammad Hasnain",
